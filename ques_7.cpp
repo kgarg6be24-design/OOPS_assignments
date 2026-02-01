@@ -1,20 +1,22 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+namespace First {
+    int x = 10;
+    void show() {
+        cout << "First namespace x = " << x << endl;
+    }
+}
+
+namespace Second {
+    int x = 20;
+    void show() {
+        cout << "Second namespace x = " << x << endl;
+    }
+}
+
 int main() {
-    int a, b;
-
-    cout << "Enter two numbers: ";
-    cin >> a >> b;
-
-    // Swapping using XOR bitwise operator
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-
-    cout << "After swapping:" << endl;
-    cout << "a = " << a << endl;
-    cout << "b = " << b << endl;
-
+    First::show();
+    Second::show();
     return 0;
 }
