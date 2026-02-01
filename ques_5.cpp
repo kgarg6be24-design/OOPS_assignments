@@ -1,37 +1,21 @@
 #include<iostream>
+#include <iomanip>   // for setw
+
 using namespace std;
 
-class Complex {
-    float real, imag;
-
-public:
-    void ComplexNo(float r, float i) {
-        real = r;
-        imag = i;
-    }
-
-    void displayComplex() {
-        cout << real << " + " << imag << "i" << endl;
-    }
-
-    Complex add(Complex c) {
-        Complex temp;
-        temp.real = real + c.real;
-        temp.imag = imag + c.imag;
-        return temp;
-    }
-};
-
 int main() {
-    Complex c1, c2, c3;
 
-    c1.ComplexNo(2.5, 3.5);
-    c2.ComplexNo(1.5, 2.5);
+    cout << "Using endl:" << endl;
+    cout << "Line 1" << endl << "Line 2" << endl << endl;
 
-    c3 = c1.add(c2);
+    cout << "Using setw() for formatted output:" << endl;
+    cout << setw(10) << "Name"
+         << setw(10) << "Roll No."<<endl;
 
-    cout << "Sum of Complex Numbers: ";
-    c3.displayComplex();
+    cout << setw(10) << "Krish "
+         << setw(10) << " 1024150236"<<endl;
+
+
 
     return 0;
 }
